@@ -1,0 +1,5 @@
+html, body { background: #024; color: #FFF; font-size: 12pt; font-family: Helvetica, Arial, Sans-serif; }
+nav, code, time { font-family: Consolas, "Lucida Console", "Courier New", Monospace; }
+a { color: #FA0; }
+a:visited { color: #A60; }
+a:hover, a:active { color: #FF0; }
