@@ -495,7 +495,9 @@ class Database extends PDO
      */
     public function getModifed(): DateTime
     {
-        return new DateTime('@' . filemtime($this->filePath));
+        $DateTime = new DateTime();
+        $DateTime->createFromFormat('U', filemtime($this->filePath));
+        return $DateTime;
     }
 
     /**
