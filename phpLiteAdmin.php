@@ -457,7 +457,7 @@ class Database extends PDO
      */
     public function getSchema()
     {
-        foreach ($this->query('SELECT rowid, * FROM sqlite_master WHERE type = "table" AND name NOT LIKE "sqlite_%" ORDER BY name;') as $row)
+        foreach ($this->query('SELECT rowid, * FROM sqlite_master WHERE type IN("table", "view") AND name NOT LIKE "sqlite_%" ORDER BY name;') as $row)
         {
             $this->schema[$row['rowid']] = $row;
         }
